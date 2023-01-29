@@ -54,4 +54,47 @@ test('3 더하기 3은 5가 아니야.', () => {
 - toBe()는 숫자나 문자 등 기본 타입 값을 비교할 때 사용한다.
 
 # #2. 유용한 Matchers
+## toEqual()
+### fn.js
+```javascript
+const fn = {
+    makeUser: (name, age) => ({ name, age }), // 이름과 나이를 입력받아서 User 객체를 return
+}
+```
+### fn.test.js
+```javascript
+test('이름과 나이를 전달받아서 객체를 반환해줘.', () => {
+    expect(fn.makeUser('seungha', 25)).toBe({name: 'seungha', age: 25}); // failed
+})
+
+test('이름과 나이를 전달받아서 객체를 반환해줘.', () => {
+    expect(fn.makeUser('seungha', 25)).toEqual({name: 'seungha', age: 25}); passed
+})
+```
+- 객체나 배열은 재귀적으로 돌면서 값을 확인해야하기 때문에 toEqual()을 사용해야 한다.
+
+## toStrictEqual()
+### fn.js
+```javascript
+const fn = {
+    makeUser: (name, age) => ({ name, age, gender: undefined }), // 이름과 나이 입력받아서 User 객체를 return 한다.
+};
+```
+### fn.test.js
+```javascript
+test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
+    expect(fn.makeUser('seungha', 25)).toEqual({name: 'seungha', age: 25}); // passed
+})
+
+test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
+    expect(fn.makeUser('seungha', 25)).toStrictEqual({name: 'seungha', age: 25}); // failed
+})
+```
+- 개발자의 의도대로라면 실패해야함.
+- 보다 엄격하게 테스트를 진행하려면 toStrictEqual을 사용하는 것이 좋음.
+
+## toBeNull, toBeUndefined, toBeDefined
+
+## toBeTruthy, toBeFalsy
+
 

@@ -12,6 +12,13 @@ test('3더하기 3은 5야', () => {
     expect(fn.add(3, 3)).not.toBe(5);
 })
 
+test('3더하기 3은 6이야.', () => {
+    expect(fn.add(3, 3)).toEqual(6);
+})
 test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
     expect(fn.makeUser('seungha', 25)).toEqual({name: 'seungha', age: 25});
+})
+
+test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
+    expect(fn.makeUser('seungha', 25)).toStrictEqual({name: 'seungha', age: 25});
 })

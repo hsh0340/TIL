@@ -15,10 +15,42 @@ test('3더하기 3은 5야', () => {
 test('3더하기 3은 6이야.', () => {
     expect(fn.add(3, 3)).toEqual(6);
 })
-test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
-    expect(fn.makeUser('seungha', 25)).toEqual({name: 'seungha', age: 25});
-})
 
 test('이름과 나이를 전달받아서 객체를 반환해줘', () => {
-    expect(fn.makeUser('seungha', 25)).toStrictEqual({name: 'seungha', age: 25});
+    expect(fn.makeUser('seungha', 25)).toStrictEqual({name: 'seungha', age: 25, gender: undefined});
+})
+
+test('null은 null입니다.', () => {
+    expect(null).toBeNull();
+})
+
+test('0은 false입니다.', () => {
+    expect(fn.add(-1, 1)).toBeFalsy();
+})
+
+test('비어있지 않은 문자열은 true입니다.', () => {
+    expect(fn.add('Hello', 'world')).toBeTruthy();
+})
+
+test('ID는 10자 이하여야 합니다.', () => {
+    const id = 'THE_BLACK';
+    expect(id.length).toBeLessThanOrEqual( 10);
+})
+
+test('0.1 더하기 0.2는  0.3입니다.', () => {
+    expect(fn.add(0.1, 0.2)).toBeCloseTo(0.3);
+})
+
+test("Hello world에 a라는 문자가 포함되어있나요?", () => {
+    expect('Hello world').toMatch(/h/i);
+})
+
+test('user list에 seungha가 있나?', () => {
+    const user = 'seungha';
+    const userList = ['yessul', 'yajin', 'yena', 'heejin', 'seungha'];
+    expect(userList).toContain(user);
+})
+
+test('이거 에러 나나요?', () => {
+    expect(() => fn.throwError()).toThrow();
 })

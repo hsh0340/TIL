@@ -95,7 +95,7 @@
  
 ### storage definition language(SDL)
 - internal schema를 정의하는 용도로 사용되는 언어
-- 요즘은 특히 relational DBMS에서는 SDL이 거의 없고 파라미터 등의 설젇으로 대체됨
+- 요즘은 특히 relational DBMS에서는 SDL이 거의 없고 파라미터 등의 설정으로 대체됨
 
 ### view definition language(VDL)
 - external schemas를 정의하기 위해 사용되는 언어

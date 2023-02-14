@@ -8,3 +8,7 @@
 ### EntityMetadataNotFoundError
 
 - 해결 방법: module에 entity를 등록
+
+### typeorm-model-generator error
+
+- 해결 방법: model generator 명령어에 -s로 스키마를 추가해주었다.

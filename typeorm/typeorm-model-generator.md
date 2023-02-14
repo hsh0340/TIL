@@ -10,3 +10,7 @@ $ npm i typeorm-model-generator -D
 ```bash
 $ npx typeorm-model-generator -h [host] -d [database] -u [user] -x [password] -e [database]
 ```
+### PostgreSQL 인 경우
+```bash
+$ npx typeorm-model-generator -h [host] -d [database] -s [schema] -u [user] -x [password] -e [database]
+```

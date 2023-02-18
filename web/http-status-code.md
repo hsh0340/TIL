@@ -1,0 +1,20 @@
+# HTTP 상태코드
+- 1xx (정보): 요청을 받았고, 처리 중입니다.
+  - 100 Continue
+  - 101 Switching Protocols
+- 2xx (성공): 요청을 성공적으로 받았으며, 이해하고 수락하였습니다.
+  - 200 OK
+  - 201 Created
+  - 204 No Content
+- 3xx (리다이렉션): 요청을 완료하기 위해 추가 작업이 필요합니다.
+  - 301 Moved Permanently
+  - 302 Found
+  - 304 Not Modified
+- 4xx (클라이언트 오류): 요창이 잘못되었거나 요청을 수행할 수 없습니다.
+  - 400 Bad Request
+  - 401 Unauthorized
+  - 404 Not Found
+- 5xx (서버오류): 서버가 유효한 요청에 대해 적절한 응답을 하지 못합니다.
+  - 500 Internal Server Error
+  - 502 Bad Gateway
+  - 503 Service Unavailable

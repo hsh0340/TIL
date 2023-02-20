@@ -3,7 +3,7 @@
 
 ## 설치
 ```bash
-$ npm install --save @nestjs/typeorm typeorm pg
+$ npm install --save @NestJS/typeorm typeorm pg
 ```
 
 ## app.module.ts 수정

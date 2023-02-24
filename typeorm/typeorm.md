@@ -3,7 +3,7 @@
 
 ## 설치
 ```bash
-$ npm install --save @NestJS/typeorm typeorm pg
+$ npm install --save @nestjs/typeorm typeorm pg
 ```
 
 ## app.module.ts 수정
@@ -23,3 +23,23 @@ $ npm install --save @NestJS/typeorm typeorm pg
     }),
 })
 ```
+
+위와 같이 entities:[] 안에 entity들을 import 하여 사용할 수도 있지만 다음과 같이 사용할 수도 있다.
+```typescript
+@Module({
+    TypeOrmModule.forRoot({
+        type: 'postgres',
+        host: 'localhost',
+        port: 5432,
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE,
+        autoloadEntities: true,
+        synchronize: true,
+        logging: true,
+        keepConnectionAlive: true,
+    }),
+    TypeOrmModule.forFeature([Advertisers]),
+})
+```
+autoloadEntities를 true로 설정해주고, TypeOrmModule.forFeature([]) 안에 entity들을 불러온다.

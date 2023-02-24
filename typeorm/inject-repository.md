@@ -9,6 +9,6 @@ constructor(
 ### users.module.ts
 ```typescript
 @Module({
-    imports: [TypeOrmModule.forFeature([Useres])],
+    imports: [TypeOrmModule.forFeature([Users])],
 })
 ```

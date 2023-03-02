@@ -22,3 +22,8 @@ ALTER TABLE [테이블명] MODIFY COLUMN [컬럼명] [컬럼 타입] NOT NULL;
 ```bash
 ALTER TABLE [테이블명] ALTER COLUMN [컬럼명] SET DEFAULT [기본값];
 ```
+
+### 특정 컬럼 삭제
+```bash
+ALTER TABLE [테이블명] DROP COLUMN [컬럼명];
+```

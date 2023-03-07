@@ -27,3 +27,10 @@ ALTER TABLE [테이블명] ALTER COLUMN [컬럼명] SET DEFAULT [기본값];
 ```bash
 ALTER TABLE [테이블명] DROP COLUMN [컬럼명];
 ```
+]
+
+### fk 관계 해제
+```bash
+ALTER TABLE [테이블명] DROP FOREIGN KEY [제약조건이름]
+```
+

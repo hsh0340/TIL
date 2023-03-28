@@ -27,10 +27,25 @@ ALTER TABLE [테이블명] ALTER COLUMN [컬럼명] SET DEFAULT [기본값];
 ```bash
 ALTER TABLE [테이블명] DROP COLUMN [컬럼명];
 ```
-]
+
 
 ### fk 관계 해제
 ```bash
 ALTER TABLE [테이블명] DROP FOREIGN KEY [제약조건이름]
+```
+
+### 컬럼 맨앞에 추가
+```bash
+ALTER TABLE [테이블명] ADD [새컬럼명] 자료형 FIRST;
+```
+
+### 컬럼 맨 뒤에 추가
+```bash
+ALTER TABLE [테이블명] ADD [새컬럼명] 자료형;
+```
+
+### 지정 컬럼 다음에 추가
+```bash
+ALTER TABLE [테이블명] ADD [새컬럼명] 자료형 AFTER [앞컬럼명];
 ```
 

@@ -1,5 +1,5 @@
 # class-validator
-service에서 validate 하지 않고 entity에서 할 수 있다.
+DTO를 통해 데이터를 전달할 때, 데이터들의 유효성을 검사하는 용도로 사용한다.
 
 ## 설치
 ```bash
@@ -7,7 +7,7 @@ $ npm i class-validator class-transformer
 ```
 ## Users.ts
 ```typescript
-export class Users {
+export class JoinRequestDto {
     @IsNotEmpty()
     @IsEmail()
     @Column('character varying', { primary: true, name: 'email', length: 200 })
